@@ -1,0 +1,9 @@
+.idea/
+VOC2012/
+VOCPerson/
+YoloPerson/
+Yolo_mark/
+__pycache__/
+darknet/
+test.py
+pytorch-yolo/
