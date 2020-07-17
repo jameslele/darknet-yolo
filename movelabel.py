@@ -1,6 +1,6 @@
 # 将训练集，验证集的数据对应的label文件移到label文件夹下面对应的文件中
 
-import os, random, shutil
+import os, shutil
 
 
 def main():

@@ -5,7 +5,6 @@ import creatrtxt
 import txtadd_data
 import movelabel
 import os, random, shutil
-from PIL import Image
 
 
 def del_unimportant_files():
@@ -174,30 +173,6 @@ def collect_data_from_custom_data():
     cp_two_files_from_yolomark_to_darknet()
 
 
-def convert_jpg_to_png():
-    print("convert_jpg_to_png...")
-    train_txt = './darknet/data/train.txt'
-    for i in open(train_txt, 'r'):
-        if i[-4:-1] == 'jpg':
-            jpg = './darknet/' + i.replace('\n', '')
-            png = jpg.replace('jpg', 'png')
-
-            im = Image.open(jpg)
-            im.save(png)
-            os.remove(jpg)
-
-    valid_txt = './darknet/data/valid.txt'
-    for i in open(valid_txt, 'r'):
-        if i[-4:-1] == 'jpg':
-            jpg = './darknet/' + i.replace('\n', '')
-            png = jpg.replace('jpg', 'png')
-            im = Image.open(jpg)
-            im.save(png)
-            os.remove(jpg)
-
-    # change all jpg to png in train.txt and valid.txt
-
-
 if __name__ == "__main__":
     print("Collect data from VOC2012\n")
     collect_data_from_VOC()
@@ -206,5 +181,3 @@ if __name__ == "__main__":
     collect_data_from_custom_data()
     # del_unimportant_txt()
     del_unimportant_files()
-    # convert_jpg_to_png in darknet
-    # convert_jpg_to_png()

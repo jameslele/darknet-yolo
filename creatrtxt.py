@@ -1,7 +1,7 @@
 # -*-coding:utf-8-*-
 
 # 根据训练数据集和验证数据集persontrain.txt and personvalid.txt
-import os, random, shutil
+import os
 
 
 def text_save(root, filename, data):  # filename为写入txt文件的路径，data为要写入数据列表.
