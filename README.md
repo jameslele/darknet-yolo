@@ -1,13 +1,12 @@
 # Train custom data set based on darknet
 The custom data set being trained consists of two categories, they are Kleinladungsträger and people. The data set of Kleinladungsträger consists of 642 photos taken by ourselves. The data set of people consists of nealy 10000 photos from the famous data set VOC2012.
 
-1. [Prerequisite](#Preparation)
-2. [Make labels for the data set of Kleinladungsträger](#Make labels for the data set of Kleinladungsträger)
-3. [Preparation](#Preparation)
-4. [Make labels for the data set of Kleinladungsträger](#Make labels for the data set of Kleinladungsträger)
-5. [Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory](#Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory)
-6. [Training](#Training)
-7. [Test](#Test)
+1. [Prerequisite](#Prerequisite)
+2. [Preparation](#Preparation)
+3. [Make labels for the data set of Kleinladungsträger](#Make labels for the data set of Kleinladungsträger)
+4. [Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory](#Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory)
+5. [Training](#Training)
+6. [Test](#Test)
 
 ## Prerequisite
 - Ubuntu 18.04
