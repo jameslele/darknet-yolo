@@ -8,6 +8,7 @@ import os, random, shutil
 
 
 def del_unimportant_files():
+    # elete unimportant txt files
     persontrain_txt = './persontrain.txt'
     personvalid_txt = './personvalid.txt'
     finally_persontrain_txt = './finally_persontrain.txt'
@@ -16,7 +17,9 @@ def del_unimportant_files():
     os.remove(finally_personvalid_txt)
     os.remove(persontrain_txt)
     os.remove(personvalid_txt)
-    # delete images that not important
+
+    # delete images that are not in darknet, Yolo_mark, VOC2012
+    os.system('rm -rf YoloPerson/ VOCPerson/')
 
 
 def cp_voc_into_darknet():
@@ -124,12 +127,14 @@ def cp_data_from_yolomark_to_darknet():
         train_label_in_darknet = darknet_path + train_file_name_in_darknet + '.txt'
         train_image_in_darknet = darknet_path + train_file_name_in_darknet + '.png'
 
-        # copy image
-        shutil.copy(train_image_in_yolomark, train_image_in_darknet)
-        # copy label
-        shutil.copy(train_label_in_yolomark, train_label_in_darknet)
-        # copy file path
-        train_images_in_darknet.append(train_image_in_darknet.replace(darknet_path, '') + '\n')
+        # Copy image file which has label
+        if os.path.getsize(train_label_in_yolomark) > 0:
+            # copy image
+            shutil.copy(train_image_in_yolomark, train_image_in_darknet)
+            # copy label
+            shutil.copy(train_label_in_yolomark, train_label_in_darknet)
+            # copy file path
+            train_images_in_darknet.append(train_image_in_darknet.replace(darknet_path, '') + '\n')
 
     for i in valid_sample_list:
         file_name_in_yolomark = i[12:-5]
@@ -140,12 +145,14 @@ def cp_data_from_yolomark_to_darknet():
         valid_label_in_darknet = darknet_path + valid_file_name_in_darknet + '.txt'
         valid_image_in_darknet = darknet_path + valid_file_name_in_darknet + '.png'
 
-        # copy image
-        shutil.copy(valid_image_in_yolomark, valid_image_in_darknet)
-        # copy label
-        shutil.copy(valid_label_in_yolomark, valid_label_in_darknet)
-        # copy file path
-        valid_images_in_darknet.append(valid_image_in_darknet.replace(darknet_path, '') + '\n')
+        # Copy image file which has label
+        if os.path.getsize(valid_label_in_yolomark) > 0:
+            # copy image
+            shutil.copy(valid_image_in_yolomark, valid_image_in_darknet)
+            # copy label
+            shutil.copy(valid_label_in_yolomark, valid_label_in_darknet)
+            # copy file path
+            valid_images_in_darknet.append(valid_image_in_darknet.replace(darknet_path, '') + '\n')
 
     # copy file path
     with open(train_txt_in_darknet, 'a+') as f:
