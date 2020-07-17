@@ -101,6 +101,7 @@ $ mv VOCdevkit/* ./ && rm -rf VOCdevkit/ VOCtrainval_11-May-2012.tar
     ```
     ![](resources/4.png)
  
+The tagged data set of `Kleinladungsträger` has been uploaded to [FAU Box](https://faubox.rrze.uni-erlangen.de/folderstable) under `Studierende (Christian Hofmann)/Austausch/Yolo Gewicht`.
 ## Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory
 ```bash
 $ cd ~/train_custom_data/darknet-yolo
@@ -140,6 +141,7 @@ $ python3 collect_data.py
    ```
    ![](resources/5.png)
 
+The trained weight has been uploaded to [FAU Box](https://faubox.rrze.uni-erlangen.de/folderstable) under `Studierende (Christian Hofmann)/Austausch/Yolo Gewicht`.
 ## Test
 The trained weight file is stored in the `backup` folder under darknet directory.
 
