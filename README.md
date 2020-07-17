@@ -3,8 +3,8 @@ The custom data set being trained consists of two categories, they are Kleinladu
 
 1. [Prerequisite](#Prerequisite)
 2. [Preparation](#Preparation)
-3. [Make labels for the data set of Kleinladungsträger](#Make labels for the data set of Kleinladungsträger)
-4. [Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory](#Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory)
+3. [Make labels for the data set of Kleinladungsträger](#jump4)
+4. [Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory](#jump5)
 5. [Training](#Training)
 6. [Test](#Test)
 
@@ -86,7 +86,7 @@ $ tar xvf VOCtrainval_11-May-2012.tar
 $ mv VOCdevkit/* ./ && rm -rf VOCdevkit/ VOCtrainval_11-May-2012.tar
 ```
 
-## Make labels for the data set of Kleinladungsträger
+## <span id="jump4">Make labels for the data set of Kleinladungsträger</span>
 - delete all files from directory x64/Release/data/img in directory of Yolo_mark
     
     `$ rm ~/train_custom_data/darknet-yolo/Yolo_mark/x64/Release/data/img/*`
@@ -102,7 +102,7 @@ $ mv VOCdevkit/* ./ && rm -rf VOCdevkit/ VOCtrainval_11-May-2012.tar
  
 The tagged data set of `Kleinladungsträger` has been uploaded to [FAU Box](https://faubox.rrze.uni-erlangen.de/folderstable) under `Studierende (Christian Hofmann)/Austausch/Yolo Gewicht`.
 
-## Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory
+## <span id="jump5">Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory</span>
 ```bash
 $ cd ~/train_custom_data/darknet-yolo
 $ python3 collect_data.py
