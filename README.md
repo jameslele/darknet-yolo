@@ -3,7 +3,7 @@ The custom data set being trained consists of two categories, they are Kleinladu
 
 1. [Prerequisite](#Prerequisite)
 2. [Preparation](#Preparation)
-3. [Make labels for the data set of Kleinladungsträger](Make labels for the data set of Kleinladungsträger)
+3. [Make labels for the data set of Kleinladungsträger](#Make labels for the data set of Kleinladungsträger)
 4. [Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory](#Extract the photos and labels of the data set of people and copy two data sets of Kleinladungsträger and people into darknet directory)
 5. [Training](#Training)
 6. [Test](#Test)
