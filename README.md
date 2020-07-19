@@ -19,7 +19,12 @@ The custom data set being trained consists of two categories, they are Kleinladu
     $ echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc && echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64' >> ~/.bashrc && echo 'export LD_LIBRARY_PATH=/usr/local/cuda/include:$LD_LIBRARY_PATH' >> ~/.bashrc && source ~/.bashrc
     ```
 - [cuDNN >= 7.6.5](#jump3): [https://developer.nvidia.com/rdp/cudnn-download](https://developer.nvidia.com/rdp/cudnn-download)
-- CMake >= 3.10.2: `$ sudo apt install cmake`
+- CMake >= 3.18.0: 
+    ```bash
+    $ sudo apt purge cmake 
+    $ sudo snap install cmake --classic
+    $ hash –r  
+    ```
 - OpenCV >= 3.2: `$ sudo apt install libopencv-dev`
 
 #### <span id="jump1">Install Nvidia Driver</span>
