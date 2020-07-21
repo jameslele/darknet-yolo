@@ -21,9 +21,9 @@ The custom data set being trained consists of two categories, they are Kleinladu
 - [cuDNN >= 7.6.5](#jump3): [https://developer.nvidia.com/rdp/cudnn-download](https://developer.nvidia.com/rdp/cudnn-download)
 - CMake >= 3.18.0: 
     ```bash
-    $ sudo apt purge cmake 
-    $ sudo snap install cmake --classic
-    $ hash –r  
+    $ wget https://github.com/Kitware/CMake/releases/download/v3.15.2/cmake-3.15.2.tar.gz
+    $ tar -zxvf cmake-3.15.2.tar.gz && cd cmake-3.15.2
+    $ ./bootstrap && make -j$(nproc) && make install 
     ```
 - OpenCV >= 3.2: `$ sudo apt install libopencv-dev`
 
@@ -32,6 +32,15 @@ The custom data set being trained consists of two categories, they are Kleinladu
 
 #### <span id="jump2">Install Cuda</span>
 ![](resources/2.png)
+    
+    $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin 
+    $ sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600 
+    $ wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda-repo-ubuntu1804-10-2-local-10.2.89-440.33.01_1.0-1_amd64.deb 
+    $ sudo dpkg -i cuda-repo-ubuntu1804-10-2-local-10.2.89-440.33.01_1.0-1_amd64.deb 
+    $ sudo apt-key add /var/cuda-repo-10-2-local-10.2.89-440.33.01/7fa2af80.pub 
+    $ sudo apt-get update 
+    $ sudo apt-get -y install cuda 
+   
 
 #### <span id="jump3">Install cuDNN</span>
 ![](resources/3.png)

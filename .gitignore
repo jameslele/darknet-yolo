@@ -7,3 +7,14 @@ __pycache__/
 darknet/
 test.py
 pytorch-yolo/
+dog_bboxes.png
+labelImg/
+onnx-tensorrt/
+onnx_deploy/
+onnx_to_tensorrt.py
+torch2trt/
+yolo-obj-yolov3-416.onnx
+yolo-obj-yolov3-416.trt
+yolov3.onnx
+yolov3.trt
+yolov3_to_onnx.py
