@@ -23,7 +23,7 @@ The custom data set being trained consists of two categories, they are Kleinladu
     ```bash
     $ wget https://github.com/Kitware/CMake/releases/download/v3.15.2/cmake-3.15.2.tar.gz
     $ tar -zxvf cmake-3.15.2.tar.gz && cd cmake-3.15.2
-    $ ./bootstrap && make -j$(nproc) && make install 
+    $ ./bootstrap && make -j$(nproc) && sudo make install 
     ```
 - OpenCV >= 3.2: `$ sudo apt install libopencv-dev`
 
